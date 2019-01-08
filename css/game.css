@@ -122,6 +122,10 @@ body {
     font-weight: bold; 
 }
 
+#source {
+    white-space: nowrap;
+}
+
 .clinical-info {
     display: none;
     height: 51.8vh;
@@ -149,6 +153,7 @@ body {
 .time-up {
     animation: timeUp 1s infinite;
     margin: 19px auto;
+    white-space: nowrap;
 }
 
 .almost-time-up {
@@ -187,4 +192,10 @@ body {
 
 .disabled-btn:hover {
     cursor: not-allowed;
+}
+
+@media screen and (min-width: 1100px) {
+    .container {
+        width: 60%
+    }
 }
