@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="css/game.css">
+    <!-- font awesome CSS -->  
+    <link rel="stylesheet" href="css/all.min.css">
+      
+
+    <title>MedPlay Alpha - Playing</title>
+  </head>
+  <body>
+    <!-- navigation -->  
+    <div class="topnav">
+      <span class="text-uppercase">MedPlay Alpha</span>    
+      <a href="index.html" onclick="goToHome()" class="text-uppercase">Home</a>
+        <script>
+            function goToHome() {
+                window.location.assign('index.html');
+            }
+        </script>
+      <a href="instructions.html" onclick="goToInstructions()" class="text-uppercase">instructions</a>
+        <script>
+            function goToInstructions() {
+                window.location.assign('instructions.html');
+            }
+        </script>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-8 game-cont">
+                <!-- placeholders for the dynamically inputed images -->
+                <div class="row images">
+                    <div class="col-sm-6 image">
+                        <img class="img-fluid" id="img-a" src="img/alopecia-a.jpg">
+                    </div>
+                    <div class="col-sm-6 image">
+                        <img class="img-fluid" id="img-b" src="img/alopecia-b.jpg">
+                    </div>
+                    <div class="col-sm-6 image">
+                        <img class="img-fluid" id="img-c" src="img/alopecia-c.jpg">
+                    </div>
+                    <div class="col-sm-6 image">
+                        <img class="img-fluid" id="img-d" src="img/alopecia-d.jpg">
+                    </div>
+                </div>
+                
+                <div class="row words">
+                    <div class="col-12 scrambled-word" id="scrambled-word">     
+                        <!-- the scrambled word lives here -->
+                    </div>
+                    
+                    <div class="col-12 answer-word mt-3" id="answer-word">
+                        <!-- the answer word(formed from arranging the scrambled word) lives here -->
+                    </div>
+                    
+                </div>
+                <button class="btn text-capitalize btn-outline-primary px-4" id="reset-btn">reset</button>
+                
+                
+                <!-- Trigger the modal with a button 
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2" id="sure-to-end-btn" style="display: none">Sure To End</button>
+
+              <!-- Modal 
+              <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">MedPlay Alpha</h4>
+                      <button type="button" class="close" data-dismiss="modal" id="end-game-modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Are you sure you want to End the game?...NB: Your progress will be lost</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-danger text-capitalize w-25" onclick="goToHome()">End Game</button>
+                      <button type="button" class="btn btn-outline-primary text-capitalize w-50" id="return-to-game-btn">return to game</button>
+                    </div> 
+                  </div>
+
+                </div>
+              </div>
+               --> 
+                 
+                <button class="btn text-uppercase btn-secondary px-5" id="next-btn">next</button>
+                
+                <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" id="game-end-modal-btn" style="display: none" data-toggle="modal" data-target="#myModal">Game End Modal  Btn</button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title text-uppercase text-primary">results summary</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      
+                    </div>
+                    <div class="modal-body">
+                      <span class="h4 game-end-total-score" id="game-end-total-score">
+                          <!-- the total score in the modal at the end lives here -->
+                        </span>
+                      <br><br>    
+                      <p class="h4 game-end-dynamic-message text-capitalize " id="game-end-dynamic-message">
+                          <!-- the dynamic message in the modal -->
+                        </p>  
+                      <br>     
+                      <p class="h4 user-speed" id="user-speed">
+                          <!-- the user speed lives here -->
+                      </p>
+                        <br>
+                      <p class="h5 high-score" id="high-score">
+                          <!-- the high score lives here -->
+                      </p>
+                      <p class="h5 best-speed" id="best-speed">
+                          <!-- the best speed lives here -->
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-danger text-capitalize w-25" onclick="goToHome()">exit</button>
+                       <button type="button" class="btn btn-outline-primary text-capitalize w-25" onclick="goToGame()">replay</button>
+                        <script>
+                            function goToGame() {
+                                document.location.assign('game.html');
+                            }
+                        </script> 
+                    </div> 
+                  </div>
+
+                </div>
+              </div>
+            </div> 
+            
+            <div class="col-4 results-box">
+                <div class="row">
+                    <h3 class="score ml-3 mb-0 h2 text-capitalize" id="score">
+                        <!-- the progressive score lives here -->
+                    </h3>
+                </div>
+                
+                <h1 class="timer" id="timer">
+                    <!-- the timer lives here -->
+                </h1>
+                
+                <div>
+                    <span class="h2 response-msg" id="response-msg">
+                        <!-- the response message lives here, shown after the answer is checked -->
+                    </span>
+                </div>
+                
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" id="progress-bar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                      0%
+                    </div>
+                </div>
+                
+                <div class="clinical-info mt-2" id="clinical-info">
+                    <div id="accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header pt-1 pb-1" role="tab" id="headingOne">
+                            <button data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn text-uppercase w-100">
+                              summary
+                            </button>
+                        </div>
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body" id="clinical-summary">
+                              <!-- the body of the accordion for clinical summary lives here -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header pt-1 pb-1" role="tab" id="headingTwo">
+                            <button class="collapsed btn text-uppercase w-100" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              etiology
+                            </button>
+                        </div>
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body" id="clinical-etiology">
+                              <!-- the body of the accordion for clinical etiology lives here -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header pt-1 pb-1" role="tab" id="headingThree">
+                            <button class="collapsed btn text-uppercase w-100" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              symptoms
+                            </button>
+                        </div>
+                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body" id="clinical-symptoms">
+                              <!-- the body of the accordion for clinical symptoms lives here -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- the clinical info lives here, shown after the answer is checked -->
+                </div>
+                
+                <div class="source-info h5" id="source-info">
+                    <span class="source" id="source">
+                        <!-- the source lives here, shown after the answer is checked -->
+                    </span>
+                    
+                    <a href="" class="text-uppercase mt-2" id="source-link">
+                        <!-- the source link lives here, shown after the answer is checked -->
+                    </a> 
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>  
+     
+            
+      
+      
+      
+
+    <!-- Optional JavaScript -->
+      <script src="js/gameList.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/all.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

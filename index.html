@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- custom CSS -->
+      <link rel="stylesheet" href="css/style.css">
+
+    <title>MedPlay Games</title>
+  </head>
+  <body>
+    <!-- navigation -->  
+    <div class="topnav">
+      <span class="text-uppercase">MedPlay Alpha</span>    
+      <a href="index.html" onclick="goToHome()" class="active text-uppercase">Home</a>
+        <script>
+            function goToHome() {
+                window.location.assign('index.html');
+            }
+        </script>
+      <a href="instructions.html" onclick="goToInstructions()" class="text-uppercase">instructions</a>
+        <script>
+            function goToInstructions() {
+                window.location.assign('instructions.html');
+            }
+        </script>
+    </div>
+    <div id="container">
+        <div id="home">
+          <!-- the homepage short message -->
+          <h2 class="text-capitalize">it's simple!</h2>
+          <span class="message first-message">Four images pointing to a clinical presentation, 1 scrambled word.</span>
+          <span class="message second-message">Reorganize the scrambled word to match the clinical presentation by clicking on the letters in order.</span>
+          
+          <!-- the next button -->
+            <br>
+            <a href="game.html" class="start-btn btn btn-success text-light text-uppercase" id="start-btn">start!</a>
+        </div>
+    </div> 
+      
+ 
+      
+      
+
+    <!-- Optional JavaScript -->
+      <script src="js/app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
