@@ -1,4 +1,4 @@
-// VARIABLES
+ // VARIABLES
 let imgA, imgB, imgC, imgD, scrambledWord, ansWord, nextBtn, score, timer, responseMsg, progressBar, clinicalInfo, clinicalSummary, clinicalEtiology, clinicalSymptoms, source, sourceLink, scoreCount, ansCheckWord, startBtn, gameEndTotal, gameEndDynamicMessage, userSpeed, resetBtn, highScore, bestSpeed;
 // this value is set to true when the givePoints runs, to avoid running it again when the timer hits zero
 let checkIfPoints = false;
@@ -84,13 +84,19 @@ scoreCount = 0;
 progressBar.textContent = '0%';
 
 //variables for filters
-let topic = 'anatomy';
-let system = 'git';
-let level = 1;
+let topic1 = 'anatomy';
+let topic2 = null;
+let system1 = 'git';
+let system2 = 'cvs';
+let sytem3 = 'cns';
+let level1 = 1;
+let level2 = 2;
+let type1 = null;
+let type2 = 'general term';
 
 //create the filter
 let newGameList = gameList.filter(function(game) {
-    return game.topic === topic && game.system === system && game.level === level;
+    return (game.topic === topic1 || game.topic === topic2) && (game.system === system1 || game.system === system2) && (game.level === level1 || game.level === level2) && (game.type === type1 || game.type === type2);
 });
 
 // create the function that ramdomizes the game anytime you start;
@@ -536,35 +542,3 @@ function getSpeed() {
             
 }
 
-
-
-/*
-let myArray = [
-    {
-        name: 'alopecia',
-        tag: 'anatomy',
-        level: 1
-    },
-    {
-        name: 'anorexia',
-        tag: 'physiology',
-        level: 1
-    },
-    {
-        name: 'cachexia',
-        tag: 'anatomy',
-        level: 2
-    }
-];
-
-let newArray = myArray.filter(function(obj) {
-    return obj.tag === 'anatomy' && obj.level === 1; 
-})
-
-console.log(newArray);
-
-let newGame = gameList.filter((obj) => obj.name === 'cachexia');
-
-console.log('-------------------------------');
-console.log(newGame);
-*/
