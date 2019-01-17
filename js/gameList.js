@@ -6,7 +6,11 @@ gameList = [
         etiology : ' genetics and the male hormone dihydrotestosterone(pattern hair loss), Infection, Drugs, Trauma, Pregnancy, autoimmune disorder',
         symptoms : 'Symptoms of hair loss include hair loss in patches usually in circular patterns, dandruff, skin lesions, and scarring.',
         source : "wikipedia",
-        sourceLink: "https://wikipedia.org/wiki/alopecia"
+        sourceLink: "https://wikipedia.org/wiki/alopecia",
+        topic: "pathology",
+        system: "cns",
+        level: 1,
+        type: 'clinical presentation'
     },
     {
         name : "anorexia nervosa",
@@ -14,7 +18,11 @@ gameList = [
         etiology : 'There is evidence for biological, psychological, developmental, and sociocultural risk factors, but the exact cause of eating disorders is unknown.',
         symptoms : "A low body mass index for one's age and height, Amenorrhea, Fear of even the slightest weight gain.",
         source : "wikipedia",
-        sourceLink: "https://wikipedia.org/wiki/anorexia"
+        sourceLink: "https://wikipedia.org/wiki/anorexia",
+        topic: "pathology",
+        system: "cns",
+        level: 2,
+        type: 'clinical presentation'
     },
     {
         name : "cachexia",
@@ -22,8 +30,110 @@ gameList = [
         etiology : 'Cachexia is often seen in end-stage cancer, and in that context is called cancer cachexia. Patients with congestive heart failure can have a cachectic syndrome.',
         symptoms : 'Not Available',
         source : "wikipedia",
-        sourceLink: "https://wikipedia.org/wiki/cachexia"
-    }
+        sourceLink: "https://wikipedia.org/wiki/cachexia",
+        topic: "pathology",
+        system: "cns",
+        level: 1,
+        type: 'clinical presentation'
+    },
+    {
+        name : "aneurysm",
+        summary : "Cachexia, or wasting syndrome, is loss of weight, muscle atrophy, fatigue, weakness and significant loss of appetite in someone who is not actively trying to lose weight.Cachexia is seen in people with cancer, AIDS,[1] coeliac disease,[2] chronic obstructive pulmonary disease, multiple sclerosis, rheumatoid arthritis, congestive heart failure, tuberculosis, familial amyloid polyneuropathy, mercury poisoning (acrodynia), Crohn's disease, untreated/severe type 1 diabetes mellitus, anorexia nervosa and hormonal deficiency.",
+        etiology : 'Cachexia is often seen in end-stage cancer, and in that context is called cancer cachexia. Patients with congestive heart failure can have a cachectic syndrome.',
+        symptoms : 'Not Available',
+        source : "wikipedia",
+        sourceLink: "https://wikipedia.org/wiki/cachexia",
+        topic: "pathology",
+        system: "cvs",
+        level: 1,
+        type: 'clinical presentation'
+    },
+    {
+        name : "aortic dissection",
+        summary : "Cachexia, or wasting syndrome, is loss of weight, muscle atrophy, fatigue, weakness and significant loss of appetite in someone who is not actively trying to lose weight.Cachexia is seen in people with cancer, AIDS,[1] coeliac disease,[2] chronic obstructive pulmonary disease, multiple sclerosis, rheumatoid arthritis, congestive heart failure, tuberculosis, familial amyloid polyneuropathy, mercury poisoning (acrodynia), Crohn's disease, untreated/severe type 1 diabetes mellitus, anorexia nervosa and hormonal deficiency.",
+        etiology : 'Cachexia is often seen in end-stage cancer, and in that context is called cancer cachexia. Patients with congestive heart failure can have a cachectic syndrome.',
+        symptoms : 'Not Available',
+        source : "wikipedia",
+        sourceLink: "https://wikipedia.org/wiki/cachexia",
+        topic: "pathology",
+        system: "cvs",
+        level: 2,
+        type: 'clinical presentation'
+    },
+    {
+        name : "arrhythmia",
+        summary : "Cachexia, or wasting syndrome, is loss of weight, muscle atrophy, fatigue, weakness and significant loss of appetite in someone who is not actively trying to lose weight.Cachexia is seen in people with cancer, AIDS,[1] coeliac disease,[2] chronic obstructive pulmonary disease, multiple sclerosis, rheumatoid arthritis, congestive heart failure, tuberculosis, familial amyloid polyneuropathy, mercury poisoning (acrodynia), Crohn's disease, untreated/severe type 1 diabetes mellitus, anorexia nervosa and hormonal deficiency.",
+        etiology : 'Cachexia is often seen in end-stage cancer, and in that context is called cancer cachexia. Patients with congestive heart failure can have a cachectic syndrome.',
+        symptoms : 'Not Available',
+        source : "wikipedia",
+        sourceLink: "https://wikipedia.org/wiki/cachexia",
+        topic: "pathology",
+        system: "cvs",
+        level: 1,
+        type: 'clinical presentation'
+    },
+    {
+        name : "gallbladder",
+        summary : "Cachexia, or wasting syndrome, is loss of weight, muscle atrophy, fatigue, weakness and significant loss of appetite in someone who is not actively trying to lose weight.Cachexia is seen in people with cancer, AIDS,[1] coeliac disease,[2] chronic obstructive pulmonary disease, multiple sclerosis, rheumatoid arthritis, congestive heart failure, tuberculosis, familial amyloid polyneuropathy, mercury poisoning (acrodynia), Crohn's disease, untreated/severe type 1 diabetes mellitus, anorexia nervosa and hormonal deficiency.",
+        etiology : 'Cachexia is often seen in end-stage cancer, and in that context is called cancer cachexia. Patients with congestive heart failure can have a cachectic syndrome.',
+        symptoms : 'Not Available',
+        source : "wikipedia",
+        sourceLink: "https://wikipedia.org/wiki/cachexia",
+        topic: "anatomy",
+        system: "git",
+        level: 2,
+        type: 'general term'
+    },
+    {
+        name : "heart",
+        summary : "Cachexia, or wasting syndrome, is loss of weight, muscle atrophy, fatigue, weakness and significant loss of appetite in someone who is not actively trying to lose weight.Cachexia is seen in people with cancer, AIDS,[1] coeliac disease,[2] chronic obstructive pulmonary disease, multiple sclerosis, rheumatoid arthritis, congestive heart failure, tuberculosis, familial amyloid polyneuropathy, mercury poisoning (acrodynia), Crohn's disease, untreated/severe type 1 diabetes mellitus, anorexia nervosa and hormonal deficiency.",
+        etiology : 'Cachexia is often seen in end-stage cancer, and in that context is called cancer cachexia. Patients with congestive heart failure can have a cachectic syndrome.',
+        symptoms : 'Not Available',
+        source : "wikipedia",
+        sourceLink: "https://wikipedia.org/wiki/cachexia",
+        topic: "anatomy",
+        system: "cvs",
+        level: 2,
+        type: 'general term'
+    },
+    {
+        name : "liver",
+        summary : "Cachexia, or wasting syndrome, is loss of weight, muscle atrophy, fatigue, weakness and significant loss of appetite in someone who is not actively trying to lose weight.Cachexia is seen in people with cancer, AIDS,[1] coeliac disease,[2] chronic obstructive pulmonary disease, multiple sclerosis, rheumatoid arthritis, congestive heart failure, tuberculosis, familial amyloid polyneuropathy, mercury poisoning (acrodynia), Crohn's disease, untreated/severe type 1 diabetes mellitus, anorexia nervosa and hormonal deficiency.",
+        etiology : 'Cachexia is often seen in end-stage cancer, and in that context is called cancer cachexia. Patients with congestive heart failure can have a cachectic syndrome.',
+        symptoms : 'Not Available',
+        source : "wikipedia",
+        sourceLink: "https://wikipedia.org/wiki/cachexia",
+        topic: "anatomy",
+        system: "git",
+        level: 1,
+        type: 'general term'
+    },
+    {
+        name : "lung",
+        summary : "Cachexia, or wasting syndrome, is loss of weight, muscle atrophy, fatigue, weakness and significant loss of appetite in someone who is not actively trying to lose weight.Cachexia is seen in people with cancer, AIDS,[1] coeliac disease,[2] chronic obstructive pulmonary disease, multiple sclerosis, rheumatoid arthritis, congestive heart failure, tuberculosis, familial amyloid polyneuropathy, mercury poisoning (acrodynia), Crohn's disease, untreated/severe type 1 diabetes mellitus, anorexia nervosa and hormonal deficiency.",
+        etiology : 'Cachexia is often seen in end-stage cancer, and in that context is called cancer cachexia. Patients with congestive heart failure can have a cachectic syndrome.',
+        symptoms : 'Not Available',
+        source : "wikipedia",
+        sourceLink: "https://wikipedia.org/wiki/cachexia",
+        topic: "anatomy",
+        system: "cvs",
+        level: 2,
+        type: 'general term'
+    },
+
+    {
+        name : "pancreas",
+        summary : "Cachexia, or wasting syndrome, is loss of weight, muscle atrophy, fatigue, weakness and significant loss of appetite in someone who is not actively trying to lose weight.Cachexia is seen in people with cancer, AIDS,[1] coeliac disease,[2] chronic obstructive pulmonary disease, multiple sclerosis, rheumatoid arthritis, congestive heart failure, tuberculosis, familial amyloid polyneuropathy, mercury poisoning (acrodynia), Crohn's disease, untreated/severe type 1 diabetes mellitus, anorexia nervosa and hormonal deficiency.",
+        etiology : 'Cachexia is often seen in end-stage cancer, and in that context is called cancer cachexia. Patients with congestive heart failure can have a cachectic syndrome.',
+        symptoms : 'Not Available',
+        source : "wikipedia",
+        sourceLink: "https://wikipedia.org/wiki/cachexia",
+        topic: "anatomy",
+        system: "git",
+        level: 2,
+        type: 'general term'
+    },
+
 ]
 
 

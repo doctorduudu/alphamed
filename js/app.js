@@ -1,4 +1,4 @@
-// VARIABLES
+ // VARIABLES
 let imgA, imgB, imgC, imgD, scrambledWord, ansWord, nextBtn, score, timer, responseMsg, progressBar, clinicalInfo, clinicalSummary, clinicalEtiology, clinicalSymptoms, source, sourceLink, scoreCount, ansCheckWord, startBtn, gameEndTotal, gameEndDynamicMessage, userSpeed, resetBtn, highScore, bestSpeed;
 // this value is set to true when the givePoints runs, to avoid running it again when the timer hits zero
 let checkIfPoints = false;
@@ -83,11 +83,27 @@ scoreCount = 0;
 // set the initial textcontent of the progress bar to 0%
 progressBar.textContent = '0%';
 
+//variables for filters
+let topic1 = 'anatomy';
+let topic2 = null;
+let system1 = 'git';
+let system2 = 'cvs';
+let sytem3 = 'cns';
+let level1 = 1;
+let level2 = 2;
+let type1 = null;
+let type2 = 'general term';
+
+//create the filter
+let newGameList = gameList.filter(function(game) {
+    return (game.topic === topic1 || game.topic === topic2) && (game.system === system1 || game.system === system2) && (game.level === level1 || game.level === level2) && (game.type === type1 || game.type === type2);
+});
+
 // create the function that ramdomizes the game anytime you start;
 let gameRandomList = [];
 let randomGameNumber;
 let valueRemoved
-for (let i=0; i<gameList.length; i++) {
+for (let i=0; i<newGameList.length; i++) {
         gameRandomList.push(i);
     }
 //console.log('gameRandomList: ' + gameRandomList);
@@ -120,13 +136,13 @@ function gameObject(name, imgA, imgB, imgC, imgD, summary, etiology, symptoms, s
 // create an instance of the game object
 let currentGame;
 function fetchImage (){
-    imageFetcher = gameList[valueRemoved].name.replace(' ', '-');
+    imageFetcher = newGameList[valueRemoved].name.replace(' ', '-');
 }
 fetchImage();
 
 //console.log(imageFetcher);
 function createInstance (){
-    currentGame = new gameObject(gameList[valueRemoved].name, `img/${imageFetcher}-a.jpg`, `img/${imageFetcher}-b.jpg`, `img/${imageFetcher}-c.jpg`, `img/${imageFetcher}-d.jpg`, gameList[valueRemoved].summary, gameList[valueRemoved].etiology, gameList[valueRemoved].symptoms, gameList[valueRemoved].source, gameList[valueRemoved].sourceLink);
+    currentGame = new gameObject(newGameList[valueRemoved].name, `img/${imageFetcher}-a.jpg`, `img/${imageFetcher}-b.jpg`, `img/${imageFetcher}-c.jpg`, `img/${imageFetcher}-d.jpg`, newGameList[valueRemoved].summary, newGameList[valueRemoved].etiology, newGameList[valueRemoved].symptoms, newGameList[valueRemoved].source, newGameList[valueRemoved].sourceLink);
 }
 createInstance();
 
@@ -266,7 +282,7 @@ function createGame(currentGame) {
         timeLeft += seconds + 1;
         
          noOfQuestionsSolved += 1;
-        progressBarWidth = (Math.floor((noOfQuestionsSolved/gameList.length)* 100));
+        progressBarWidth = (Math.floor((noOfQuestionsSolved/newGameList.length)* 100));
         progressBar.style.width = `${progressBarWidth}%`;
         progressBar.textContent = `${progressBarWidth}%`;
         
@@ -497,7 +513,7 @@ function gameEndResults() {
     }
 
 function makegameEndMessage() {
-    let gameEndScorePercentage = Math.round((scoreCount / (20 * gameList.length)) * 100);
+    let gameEndScorePercentage = Math.round((scoreCount / (20 * newGameList.length)) * 100);
     
     switch(true) {
         case (gameEndScorePercentage<20): 
@@ -512,7 +528,7 @@ function makegameEndMessage() {
 }
 
 function getSpeed() {
-    let speed = scoreCount / (20 * gameList.length);
+    let speed = scoreCount / (20 * newGameList.length);
     let speedPrecise = speed.toPrecision(2);
     userSpeed.textContent = `Your Speed: ${speedPrecise}alpha`;
     
@@ -525,12 +541,4 @@ function getSpeed() {
     }
             
 }
-
-
-
-
-
-
-
-
 
