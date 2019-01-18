@@ -1,5 +1,20 @@
  // VARIABLES
 let imgA, imgB, imgC, imgD, scrambledWord, ansWord, nextBtn, score, timer, responseMsg, progressBar, clinicalInfo, clinicalSummary, clinicalEtiology, clinicalSymptoms, source, sourceLink, scoreCount, ansCheckWord, startBtn, gameEndTotal, gameEndDynamicMessage, userSpeed, resetBtn, highScore, bestSpeed;
+
+//variables from the homepage
+let clinicalCheck, generalCheck, mixedCheck, cnsCheck, gitCheck, cvsCheck, anatomyCheck, pathologyCheck, level1Check, level2Check;
+
+clinicalCheck = localStorage.getItem('clinicalCheck');
+generalCheck = localStorage.getItem('generalCheck');
+mixedCheck = localStorage.getItem('mixedCheck');
+cnsCheck = localStorage.getItem('cnsCheck');
+gitCheck = localStorage.getItem('gitCheck');
+cvsCheck = localStorage.getItem('cvsCheck');
+anatomyCheck = localStorage.getItem('anatomyCheck');
+pathologyCheck = localStorage.getItem('pathologyCheck');
+level1Check = localStorage.getItem('level1Check');
+level2Check = localStorage.getItem('level2Check');
+
 // this value is set to true when the givePoints runs, to avoid running it again when the timer hits zero
 let checkIfPoints = false;
 
@@ -84,15 +99,15 @@ scoreCount = 0;
 progressBar.textContent = '0%';
 
 //variables for filters
-let topic1 = 'anatomy';
-let topic2 = null;
-let system1 = 'git';
-let system2 = 'cvs';
-let sytem3 = 'cns';
-let level1 = 1;
-let level2 = 2;
-let type1 = null;
-let type2 = 'general term';
+let topic1 = anatomyCheck;
+let topic2 = pathologyCheck;
+let system1 = gitCheck;
+let system2 = cvsCheck;
+let sytem3 = cnsCheck;
+let level1 = level1Check;
+let level2 = level2Check;
+let type1 = clinicalCheck;
+let type2 = generalCheck;
 
 //create the filter
 let newGameList = gameList.filter(function(game) {
