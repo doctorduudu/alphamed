@@ -4,17 +4,6 @@ let imgA, imgB, imgC, imgD, scrambledWord, ansWord, nextBtn, score, timer, respo
 //variables from the homepage
 let clinicalCheck, generalCheck, mixedCheck, cnsCheck, gitCheck, cvsCheck, anatomyCheck, pathologyCheck, level1Check, level2Check;
 
-clinicalCheck = localStorage.getItem('clinicalCheck');
-generalCheck = localStorage.getItem('generalCheck');
-mixedCheck = localStorage.getItem('mixedCheck');
-cnsCheck = localStorage.getItem('cnsCheck');
-gitCheck = localStorage.getItem('gitCheck');
-cvsCheck = localStorage.getItem('cvsCheck');
-anatomyCheck = localStorage.getItem('anatomyCheck');
-pathologyCheck = localStorage.getItem('pathologyCheck');
-level1Check = localStorage.getItem('level1Check');
-level2Check = localStorage.getItem('level2Check');
-
 // this value is set to true when the givePoints runs, to avoid running it again when the timer hits zero
 let checkIfPoints = false;
 
@@ -47,7 +36,10 @@ let noOfWrong = 0;
 let resetClicked = false;
 
 // for the timer functions use
-let seconds = 20;
+let seconds = 20
+
+// to trigger the noMatchModal
+let noMatchModal = document.getElementById('no-match-modal');
 
 // set the first time high score and best score values
 if(localStorage.getItem('highScore') === null){
@@ -92,6 +84,17 @@ resetBtn = document.getElementById('reset-btn');
 highScore = document.getElementById('high-score');
 bestSpeed = document.getElementById('best-speed');
 
+clinicalCheck = localStorage.getItem('clinicalCheck');
+generalCheck = localStorage.getItem('generalCheck');
+mixedCheck = localStorage.getItem('mixedCheck');
+cnsCheck = localStorage.getItem('cnsCheck');
+gitCheck = localStorage.getItem('gitCheck');
+cvsCheck = localStorage.getItem('cvsCheck');
+anatomyCheck = localStorage.getItem('anatomyCheck');
+pathologyCheck = localStorage.getItem('pathologyCheck');
+level1Check = localStorage.getItem('level1Check');
+level2Check = localStorage.getItem('level2Check');
+
 // set the initial score to 0
 scoreCount = 0;
 
@@ -103,7 +106,7 @@ let topic1 = anatomyCheck;
 let topic2 = pathologyCheck;
 let system1 = gitCheck;
 let system2 = cvsCheck;
-let sytem3 = cnsCheck;
+let system3 = cnsCheck;
 let level1 = level1Check;
 let level2 = level2Check;
 let type1 = clinicalCheck;
@@ -111,7 +114,7 @@ let type2 = generalCheck;
 
 //create the filter
 let newGameList = gameList.filter(function(game) {
-    return (game.topic === topic1 || game.topic === topic2) && (game.system === system1 || game.system === system2) && (game.level === level1 || game.level === level2) && (game.type === type1 || game.type === type2);
+    return (game.topic === topic1 || game.topic === topic2) && (game.system === system1 || game.system === system2 || game.system === system3) && (game.level === level1 || game.level === level2) && (game.type === type1 || game.type === type2);
 });
 
 // create the function that ramdomizes the game anytime you start;
@@ -121,7 +124,6 @@ let valueRemoved
 for (let i=0; i<newGameList.length; i++) {
         gameRandomList.push(i);
     }
-//console.log('gameRandomList: ' + gameRandomList);
 
 function RandomizeGame() {
     
@@ -146,6 +148,10 @@ function gameObject(name, imgA, imgB, imgC, imgD, summary, etiology, symptoms, s
     this.symptoms = symptoms;
     this.source = source; 
     this.sourceLink = sourceLink;  
+}
+
+if(newGameList.length === 0) {
+    alert('Sorry we do not have any terms that match your selection at the moment, you can contact Us to request for it to be added. Thank You');    window.location.assign('index.html');
 }
 
 // create an instance of the game object
