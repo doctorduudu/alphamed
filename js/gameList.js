@@ -9,8 +9,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/alopecia",
         topic: "pathology",
         system: "cns",
-        level: 1,
-        type: 'clinical presentation'
+        level: 'level1',
+        type: 'clinical'
     },
     {
         name : "anorexia nervosa",
@@ -21,8 +21,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/anorexia",
         topic: "pathology",
         system: "cns",
-        level: 2,
-        type: 'clinical presentation'
+        level: 'level2',
+        type: 'clinical'
     },
     {
         name : "cachexia",
@@ -33,8 +33,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/cachexia",
         topic: "pathology",
         system: "cns",
-        level: 1,
-        type: 'clinical presentation'
+        level: 'level1',
+        type: 'clinical'
     },
     {
         name : "aneurysm",
@@ -45,8 +45,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/cachexia",
         topic: "pathology",
         system: "cvs",
-        level: 1,
-        type: 'clinical presentation'
+        level: 'level1',
+        type: 'clinical'
     },
     {
         name : "aortic dissection",
@@ -57,8 +57,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/cachexia",
         topic: "pathology",
         system: "cvs",
-        level: 2,
-        type: 'clinical presentation'
+        level: 'level2',
+        type: 'clinical'
     },
     {
         name : "arrhythmia",
@@ -69,8 +69,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/cachexia",
         topic: "pathology",
         system: "cvs",
-        level: 1,
-        type: 'clinical presentation'
+        level: 'level1',
+        type: 'clinical'
     },
     {
         name : "gallbladder",
@@ -81,8 +81,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/cachexia",
         topic: "anatomy",
         system: "git",
-        level: 2,
-        type: 'general term'
+        level: 'level2',
+        type: 'general'
     },
     {
         name : "heart",
@@ -93,8 +93,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/cachexia",
         topic: "anatomy",
         system: "cvs",
-        level: 2,
-        type: 'general term'
+        level: 'level2',
+        type: 'general'
     },
     {
         name : "liver",
@@ -105,8 +105,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/cachexia",
         topic: "anatomy",
         system: "git",
-        level: 1,
-        type: 'general term'
+        level: 'level1',
+        type: 'general'
     },
     {
         name : "lung",
@@ -117,8 +117,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/cachexia",
         topic: "anatomy",
         system: "cvs",
-        level: 2,
-        type: 'general term'
+        level: 'level2',
+        type: 'general'
     },
 
     {
@@ -130,8 +130,8 @@ gameList = [
         sourceLink: "https://wikipedia.org/wiki/cachexia",
         topic: "anatomy",
         system: "git",
-        level: 2,
-        type: 'general term'
+        level: 'level2',
+        type: 'general'
     },
 
 ]
