@@ -140,6 +140,36 @@
 
                 </div>
               </div>
+            
+                <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" id="no-match-modal" style="display: none" data-toggle="modal" data-target="#myModal3">no match</button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title text-uppercase text-primary">AlphaMed</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      
+                    </div>
+                    <div class="modal-body">
+                      <p>Sorry we do not have any terms that match your selection at the moment, you can <a href="">contact Us</a> to request for it to be added. Thank You</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-danger text-capitalize w-25" onclick="goToHome()">back to home</button>
+                        <script>
+                            function goToGame() {
+                                document.location.assign('game.html');
+                            }
+                        </script> 
+                    </div> 
+                  </div>
+
+                </div>
+              </div>
             </div> 
             
             <div class="col-4 results-box">
@@ -231,7 +261,7 @@
 
     <!-- Optional JavaScript -->
       <script src="js/gameList.js"></script>
-      <script src="js/app.js"></script>
+      <script src="js/game.js"></script>
       <script src="js/all.min.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

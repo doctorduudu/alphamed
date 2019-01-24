@@ -1,5 +1,9 @@
 // VARIABLES
 let imgA, imgB, imgC, imgD, scrambledWord, ansWord, nextBtn, score, timer, responseMsg, progressBar, clinicalInfo, clinicalSummary, clinicalEtiology, clinicalSymptoms, source, sourceLink, scoreCount, ansCheckWord, startBtn, gameEndTotal, gameEndDynamicMessage, userSpeed, resetBtn, highScore, bestSpeed;
+
+//variables from the homepage
+let clinicalCheck, generalCheck, mixedCheck, cnsCheck, gitCheck, cvsCheck, anatomyCheck, pathologyCheck, level1Check, level2Check;
+
 // this value is set to true when the givePoints runs, to avoid running it again when the timer hits zero
 let checkIfPoints = false;
 
@@ -32,7 +36,10 @@ let noOfWrong = 0;
 let resetClicked = false;
 
 // for the timer functions use
-let seconds = 20;
+let seconds = 20
+
+// to trigger the noMatchModal
+let noMatchModal = document.getElementById('no-match-modal');
 
 // set the first time high score and best score values
 if(localStorage.getItem('highScore') === null){
@@ -77,20 +84,46 @@ resetBtn = document.getElementById('reset-btn');
 highScore = document.getElementById('high-score');
 bestSpeed = document.getElementById('best-speed');
 
+clinicalCheck = localStorage.getItem('clinicalCheck');
+generalCheck = localStorage.getItem('generalCheck');
+mixedCheck = localStorage.getItem('mixedCheck');
+cnsCheck = localStorage.getItem('cnsCheck');
+gitCheck = localStorage.getItem('gitCheck');
+cvsCheck = localStorage.getItem('cvsCheck');
+anatomyCheck = localStorage.getItem('anatomyCheck');
+pathologyCheck = localStorage.getItem('pathologyCheck');
+level1Check = localStorage.getItem('level1Check');
+level2Check = localStorage.getItem('level2Check');
+
 // set the initial score to 0
 scoreCount = 0;
 
 // set the initial textcontent of the progress bar to 0%
 progressBar.textContent = '0%';
 
+//variables for filters
+let topic1 = anatomyCheck;
+let topic2 = pathologyCheck;
+let system1 = gitCheck;
+let system2 = cvsCheck;
+let system3 = cnsCheck;
+let level1 = level1Check;
+let level2 = level2Check;
+let type1 = clinicalCheck;
+let type2 = generalCheck;
+
+//create the filter
+let newGameList = gameList.filter(function(game) {
+    return (game.topic === topic1 || game.topic === topic2) && (game.system === system1 || game.system === system2 || game.system === system3) && (game.level === level1 || game.level === level2) && (game.type === type1 || game.type === type2);
+});
+
 // create the function that ramdomizes the game anytime you start;
 let gameRandomList = [];
 let randomGameNumber;
 let valueRemoved
-for (let i=0; i<gameList.length; i++) {
+for (let i=0; i<newGameList.length; i++) {
         gameRandomList.push(i);
     }
-//console.log('gameRandomList: ' + gameRandomList);
 
 function RandomizeGame() {
     
@@ -117,16 +150,20 @@ function gameObject(name, imgA, imgB, imgC, imgD, summary, etiology, symptoms, s
     this.sourceLink = sourceLink;  
 }
 
+if(newGameList.length === 0) {
+    alert('Sorry we do not have any terms that match your selection at the moment, you can contact Us to request for it to be added. Thank You');    window.location.assign('index.html');
+}
+
 // create an instance of the game object
 let currentGame;
 function fetchImage (){
-    imageFetcher = gameList[valueRemoved].name.replace(' ', '-');
+    imageFetcher = newGameList[valueRemoved].name.replace(' ', '-');
 }
 fetchImage();
 
 //console.log(imageFetcher);
 function createInstance (){
-    currentGame = new gameObject(gameList[valueRemoved].name, `img/${imageFetcher}-a.jpg`, `img/${imageFetcher}-b.jpg`, `img/${imageFetcher}-c.jpg`, `img/${imageFetcher}-d.jpg`, gameList[valueRemoved].summary, gameList[valueRemoved].etiology, gameList[valueRemoved].symptoms, gameList[valueRemoved].source, gameList[valueRemoved].sourceLink);
+    currentGame = new gameObject(newGameList[valueRemoved].name, `img/${imageFetcher}-a.jpg`, `img/${imageFetcher}-b.jpg`, `img/${imageFetcher}-c.jpg`, `img/${imageFetcher}-d.jpg`, newGameList[valueRemoved].summary, newGameList[valueRemoved].etiology, newGameList[valueRemoved].symptoms, newGameList[valueRemoved].source, newGameList[valueRemoved].sourceLink);
 }
 createInstance();
 
@@ -266,7 +303,7 @@ function createGame(currentGame) {
         timeLeft += seconds + 1;
         
          noOfQuestionsSolved += 1;
-        progressBarWidth = (Math.floor((noOfQuestionsSolved/gameList.length)* 100));
+        progressBarWidth = (Math.floor((noOfQuestionsSolved/newGameList.length)* 100));
         progressBar.style.width = `${progressBarWidth}%`;
         progressBar.textContent = `${progressBarWidth}%`;
         
@@ -497,7 +534,7 @@ function gameEndResults() {
     }
 
 function makegameEndMessage() {
-    let gameEndScorePercentage = Math.round((scoreCount / (20 * gameList.length)) * 100);
+    let gameEndScorePercentage = Math.round((scoreCount / (20 * newGameList.length)) * 100);
     
     switch(true) {
         case (gameEndScorePercentage<20): 
@@ -512,7 +549,7 @@ function makegameEndMessage() {
 }
 
 function getSpeed() {
-    let speed = scoreCount / (20 * gameList.length);
+    let speed = scoreCount / (20 * newGameList.length);
     let speedPrecise = speed.toPrecision(2);
     userSpeed.textContent = `Your Speed: ${speedPrecise}alpha`;
     
@@ -525,12 +562,4 @@ function getSpeed() {
     }
             
 }
-
-
-
-
-
-
-
-
 
