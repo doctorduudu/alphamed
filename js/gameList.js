@@ -134,9 +134,46 @@ gameList = [
         type: 'general'
     },
 
-]
+];
 
+let noOfTermsFigGit = 0;
+function gitNoOfTerms() {
+    for(let i=0; i<gameList.length; i++) {
+        if(gameList[i].system === 'git'){
+            noOfTermsFigGit += 1;
+        }
+    }
+    return noOfTermsFigGit;
+}
+gitNoOfTerms()
 
+localStorage.setItem('noOfTermsFig-git', noOfTermsFigGit);
+
+let noOfTermsFigCvs = 0;
+function cvsNoOfTerms() {
+    for(let i=0; i<gameList.length; i++) {
+        if(gameList[i].system === 'cvs'){
+            noOfTermsFigCvs += 1;
+        }
+    }
+    return noOfTermsFigCvs;
+}
+cvsNoOfTerms()
+
+localStorage.setItem('noOfTermsFig-cvs', noOfTermsFigCvs);
+
+let noOfTermsFigCns = 0;
+function cnsNoOfTerms() {
+    for(let i=0; i<gameList.length; i++) {
+        if(gameList[i].system === 'cns'){
+            noOfTermsFigCns += 1;
+        }
+    }
+    return noOfTermsFigCns;
+}
+cnsNoOfTerms()
+
+localStorage.setItem('noOfTermsFig-cns', noOfTermsFigCns);
 
 /* {
         name : '',
