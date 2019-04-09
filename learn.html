@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- custom CSS -->
     <link rel="stylesheet" href="css/learn.css">
@@ -37,7 +36,12 @@
                     <span class="card-text no-of-terms h5 mt-3 git" id="no-of-terms-git">153 terms</span>  
                   </div>
                   <div class="card-footer">
-                      <button class="btn text-uppercase w-100 btn-success learn-click" id="learn-click-git">start</button>
+                      <button class="btn text-uppercase w-100 btn-success learn-click" id="learn-click-git" onclick="goToLearning()">start</button>
+                      <script>
+                        function goToLearning() {
+                            window.location.assign('learning.html');
+                        }
+                     </script>
                   </div>     
                 </div>
                 <div class="card bg-primary cvs" id="cvs">

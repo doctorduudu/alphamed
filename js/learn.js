@@ -35,7 +35,9 @@ systemValues('cns');
 document.addEventListener('click', function(e) {
     if(e.target.classList.contains('learn-click')) {
         learnSystem = e.target.parentElement.parentElement.id;
-
+        localStorage.setItem('learnSystem', learnSystem);
+        
+        
     }
 });
 

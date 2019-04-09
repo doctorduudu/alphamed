@@ -3,7 +3,7 @@ gameList = [
     {
         name : "alopecia",
         summary : "Alopecia areata, also known as spot baldness, is a condition in which hair is lost from some or all areas of the body. Often it results in a few bald spots on the scalp, each about the size of a coin. Psychological stress may result. People are generally otherwise healthy.",
-        etiology : ' genetics and the male hormone dihydrotestosterone(pattern hair loss), Infection, Drugs, Trauma, Pregnancy, autoimmune disorder',
+        etiology : 'genetics and the male hormone dihydrotestosterone(pattern hair loss), Infection, Drugs, Trauma, Pregnancy, autoimmune disorder.',
         symptoms : 'Symptoms of hair loss include hair loss in patches usually in circular patterns, dandruff, skin lesions, and scarring.',
         source : "wikipedia",
         sourceLink: "https://wikipedia.org/wiki/alopecia",
