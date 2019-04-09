@@ -134,6 +134,7 @@ gameList = [
         type: 'general'
     },
 
+<<<<<<< HEAD
 ];
 
 let noOfTermsFigGit = 0;
@@ -146,6 +147,9 @@ function gitNoOfTerms() {
     return noOfTermsFigGit;
 }
 gitNoOfTerms()
+=======
+]
+>>>>>>> master
 
 localStorage.setItem('noOfTermsFig-git', noOfTermsFigGit);
 
