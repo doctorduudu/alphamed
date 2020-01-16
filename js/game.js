@@ -283,7 +283,7 @@ function createGame(currentGame) {
       // change the timer number to 'time up'
       timer.textContent = "Time Up!";
       // reduce the size of the results and make the color red
-      timer.style.fontSize = "2rem";
+      timer.style.fontSize = "1.5rem";
       timer.style.color = "red";
       // add animation to the timer
       timer.classList.add("time-up");
@@ -407,7 +407,8 @@ function createGame(currentGame) {
       noOfWrong += 1;
       responseMsg.textContent = "0pts";
       responseMsg.classList.add = "text-danger";
-      responseMsg.innerHTML += '<i class="fas fa-times"></i>';
+      responseMsg.innerHTML +=
+        '<i class="fas fa-times" style="font-size: 25px;"></i>';
       responseMsg.style.marginLeft = "30px";
       clinicalInfo.style.display = "block";
       clinicalSummary.textContent = currentGame.summary;
@@ -503,7 +504,7 @@ function createGame(currentGame) {
       responseMsg.innerHTML += '<i class="fas fa-check"></i>';
       score.textContent = `Score: ${scoreCount}`;
       scrambledWord.innerHTML = `
-            <p class="h2 text-success">${questionsMessage()} ! <i class="fas fa-thumbs-up h1 mr-3"></i></p>
+            <p class="h4 text-success">${questionsMessage()} ! <i class="fas fa-thumbs-up h4 mr-3"></i></p>
         `;
       checkIfPoints = true;
     }
