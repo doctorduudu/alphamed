@@ -43,7 +43,7 @@ body {
 }
 
 .game-cont {
-  height: 80vh;
+  height: 85vh;
   background-color: #535319;
   margin-top: 10px;
   border: 2px solid;
@@ -51,8 +51,8 @@ body {
 }
 
 .game-cont .images .image {
-  height: 50%;
-  width: 50%;
+  height: 200px;
+  width: 200px;
   padding: 0;
   background-color: green;
   border: 1px solid green;
@@ -197,6 +197,15 @@ body {
 }
 
 /* overwrite bootstrap css */
+.card-header .btn {
+  width: 100%;
+}
+
+.source {
+  display: block;
+  margin-top: 40px;
+}
+
 @media screen and (max-width: 750px) {
   .card-header {
     padding: 0.5rem 0.1rem !important;
@@ -227,5 +236,14 @@ body {
 
   #source-link {
     font-size: 0.52rem;
+  }
+
+  .game-cont {
+    height: 80vh;
+  }
+
+  .game-cont .images .image {
+    height: 50%;
+    width: 50%;
   }
 }
