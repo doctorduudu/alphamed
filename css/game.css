@@ -43,39 +43,36 @@ body {
 }
 
 .game-cont {
-  height: 85vh;
+  height: 80vh;
   background-color: #535319;
   margin-top: 10px;
   border: 2px solid;
   border-radius: 10px;
 }
 
-.game-cont .images {
-  height: 55%;
-  background-color: red;
-}
-
 .game-cont .images .image {
   height: 50%;
   width: 50%;
   padding: 0;
-  background-color: violet;
-  border: 1px solid;
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 5%;
 }
 
 .game-cont .images .image img {
   height: 100%;
   width: 100%;
+  border-radius: 5px;
 }
 
 .words {
   position: relative;
-  top: 30px;
+  top: 15px;
 }
 
 #next-btn {
   position: absolute;
-  bottom: 5px;
+  bottom: 1px;
   right: 1%;
   box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2),
     0 10px 20px 0 rgba(0, 0, 0, 0.19);
@@ -178,11 +175,12 @@ body {
 
 #reset-btn {
   position: absolute;
-  bottom: 5px;
+  bottom: 1px;
   left: 1%;
   font-size: 1.2rem;
   font-weight: bold;
   border-width: medium;
+  padding: 4px 5px;
 }
 
 #sure-to-end-btn {
