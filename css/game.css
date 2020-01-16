@@ -1,8 +1,8 @@
 body {
-    background: #e5e5a8;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    font-family: helvetica;
+  background: #e5e5a8;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: helvetica;
 }
 
 /* Add a black background color to the top navigation */
@@ -13,14 +13,12 @@ body {
 
 /* Style the span inside the navigation bar */
 .topnav span {
-    color: #f2f2f2; 
-    text-align: center;
-    line-height: 3.2rem;
-    padding: 14px 16px;
-    font-size: 25px; 
+  color: #f2f2f2;
+  text-align: center;
+  line-height: 3.2rem;
+  padding: 14px 16px;
+  font-size: 25px;
 }
-
-
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -40,162 +38,162 @@ body {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
-
 .game-cont {
-    height: 85vh;
-    background-color: #535319;
-    margin-top: 10px;
-    border: 2px solid;
-    border-radius: 10px;
+  height: 85vh;
+  background-color: #535319;
+  margin-top: 10px;
+  border: 2px solid;
+  border-radius: 10px;
 }
 
 .game-cont .images {
-    height: 55%;
-    background-color: red;
+  height: 55%;
+  background-color: red;
 }
 
 .game-cont .images .image {
-    height: 200px;
-    padding: 0;
-    background-color: violet;
-    border: 1px solid;
+  height: 50%;
+  width: 50%;
+  padding: 0;
+  background-color: violet;
+  border: 1px solid;
 }
 
 .game-cont .images .image img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .words {
-    position: relative;
-    top: 70px;
-    left: 20px; 
+  position: relative;
+  top: 30px;
 }
 
 #next-btn {
-    position: absolute;
-    bottom: 5px;
-    right: 1%;
-    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
-    font-size: 1.2rem;
+  position: absolute;
+  bottom: 5px;
+  right: 1%;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 1.2rem;
 }
 
-
 .words .btn:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s;
-    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .timer {
-    font-size: 5rem;
-    text-align: center;
-    margin: 0;
-}
-.timer span {
-    font-size: 3rem;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
 }
 
 .response-msg {
-    color: blue;
-    position: relative;
-    left: 15%;
+  color: blue;
+  position: relative;
 }
 
 .fa-check {
-    margin-left: 8px;
-    font-size: 2.2rem;
+  margin-left: 8px;
+  font-size: 2.2rem;
 }
 
 .fa-times {
-    margin-left: 8px;
-    font-size: 2.2rem;
-    color: red;
+  margin-left: 8px;
+  font-size: 2.2rem;
+  color: red;
 }
 
 .source-info {
-    margin-top: 15px;
-    font-weight: bold; 
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 #source {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .clinical-info {
-    display: none;
-    height: 51.8vh;
+  display: none;
+  height: 51.8vh;
 }
 
 .clinical-info .card-body {
-    height: 33vh;
+  height: 33vh;
 }
 
 .clinical-info button {
-    font-size: 20px;
-    color: #535319;
-    font-family: monospace;
+  font-size: 20px;
+  color: #535319;
+  font-family: monospace;
 }
 
 .addScroll {
-    overflow-y: scroll;
-
+  overflow-y: scroll;
 }
 
 #source-link:hover {
-    box-shadow: 0 20px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 20px 12px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .time-up {
-    animation: timeUp 1s infinite;
-    margin: 19px auto;
-    white-space: nowrap;
+  animation: timeUp 1s infinite;
+  margin: 10px auto;
+  white-space: nowrap;
 }
 
 .almost-time-up {
-    animation: timeUp 0.5s infinite;
+  animation: timeUp 0.5s infinite;
 }
 
 @keyframes timeUp {
-    0%   {transform: scale(1.0);}
-    50%  {transform: scale(1.1);}
-    100% {transform: scale(1.0);}
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .progress-bar {
-    color: #24241c;
-    font-weight: bolder;
+  color: #24241c;
+  font-weight: bolder;
 }
 
 .game-end {
-    font-size: 3rem;
-    margin: 0;
+  font-size: 3rem;
+  margin: 0;
 }
 
 #reset-btn {
-    position: absolute;
-    bottom: 5px;
-    left: 1%; 
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-width: medium;
+  position: absolute;
+  bottom: 5px;
+  left: 1%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-width: medium;
 }
 
-
 #sure-to-end-btn {
-    
 }
 
 .disabled-btn:hover {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 @media screen and (min-width: 1100px) {
-    .container {
-        width: 60%
-    }
+  .container {
+    width: 60%;
+  }
 }

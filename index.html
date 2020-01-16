@@ -1,92 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-      <!-- custom CSS -->
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>MedPlay Games</title>
   </head>
   <body>
-    <!-- navigation -->  
+    <!-- navigation -->
     <div class="topnav">
-      <span class="text-uppercase">MedPlay Alpha</span>    
-      <a href="index.html" onclick="goToHome()" class="active text-uppercase">Home</a>
-        <script>
-            function goToHome() {
-                window.location.assign('index.html');
-            }
-        </script>
-      <a href="instructions.html" onclick="goToInstructions()" class="text-uppercase">instructions</a>
-        <script>
-            function goToInstructions() {
-                window.location.assign('instructions.html');
-            }
-        </script>
+      <span class="text-uppercase">MedPlay Alpha</span>
+      <a href="index.html" onclick="goToHome()" class="active text-uppercase"
+        >Home</a
+      >
+      <script>
+        function goToHome() {
+          window.location.assign("index.html");
+        }
+      </script>
+      <a
+        href="instructions.html"
+        onclick="goToInstructions()"
+        class="text-uppercase"
+        >instructions</a
+      >
+      <script>
+        function goToInstructions() {
+          window.location.assign("instructions.html");
+        }
+      </script>
     </div>
     <div id="container">
-        <div id="home">
-          <!-- the homepage short message -->
-          <!--<h2 class="text-capitalize">it's simple!</h2>
+      <div id="home">
+        <!-- the homepage short message -->
+        <!--<h2 class="text-capitalize">it's simple!</h2>
           <span class="message first-message">Four images pointing to a clinical presentation, 1 scrambled word.</span>
           <span class="message second-message">Reorganize the scrambled word to match the clinical presentation by clicking on the letters in order.</span>-->
-          
-            <!--<br><br>
+
+        <!--<br><br>
             <input type="checkbox" name="anatomy" value="anatomy" class="checkbox" id="anatomy-check">anatomy
             <input type="checkbox" name="physiology" value="physiology" class="checkbox" id="physiology-check">physiology
             <input type="checkbox" name="pathology" value="pathology" class="checkbox" id="pathology-check">pathology
             <input type="submit" name="submit" value="submit" id="topic-submit">-->
-          
-            <h4 class="text-capitalize">select filters &amp; Start!</h4>
-            <h3 class="text-uppercase">or</h3>
-            <h5 class="text-capitalize">learn first? <a href="" class="text-uppercase">click here!</a></h5>
-            --------------------------------------------------------------
-            <div class="checkbox text-uppercase h6 mb-0 mt-2">
-                <label class="mr-3"><input type="checkbox" class="check type-check" id="clinical-check" value="clinical">clinical</label>
-                <label class="mr-3"><input type="checkbox" class="check type-check" id="general-check" value="general">general</label>
-                <label class="mr-3"><input type="checkbox" class="type-check mixed" id="mixed-type-check" value="mixed">mixed</label>
-            </div>
-            --------------------------------------------------------------
-            <div class="checkbox text-uppercase h6 mb-0 mt-2">
-                <label class="mr-3"><input type="checkbox" class="check system-check" id="cns-check" value="cns">cns</label>
-                <label class="mr-3"><input type="checkbox" class="check system-check" id="git-check" value="git">git</label>
-                <label class="mr-3"><input type="checkbox" class="check system-check" id="cvs-check" value="cvs">cvs</label>
-                <label class="mr-3"><input type="checkbox" class="system-check mixed" id="mixed-system-check" value="mixed">mixed</label>
-            </div>
-            --------------------------------------------------------------
-            <div class="checkbox text-uppercase h6 mb-0 mt-2">
-                <label class="mr-3"><input type="checkbox" class="check topic-check" id="anatomy-check" value="anatomy">anatomy</label>
-                <label class="mr-3"><input type="checkbox" class="check topic-check" id="pathology-check" value="pathology">pathology</label>
-                <label class="mr-3"><input type="checkbox" class="topic-check mixed" id="mixed-topic-check" value="mixed">mixed</label>
-            </div>
-            --------------------------------------------------------------
-            <div class="checkbox text-uppercase h6 mb-0 mt-2">
-                <label class="mr-3"><input type="checkbox" class="check level-check" id="level1-check" value="level1">level 1</label>
-                <label class="mr-3"><input type="checkbox" class="check level-check" id="level2-check" value="level2">level 2</label>
-                <label class="mr-3"><input type="checkbox" class="level-check mixed" id="mixed-level-check" value="mixed">mixed</label>
-            </div>
-            --------------------------------------------------------------
-            
-            <br>
-            <!-- the start button -->
-            <a href="game.html" class="start-btn btn btn-success text-light text-uppercase" id="start-btn">start!</a>
+
+        <h4 class="text-capitalize">select filters &amp; Start!</h4>
+        <h3 class="text-uppercase">or</h3>
+        <h5 class="text-capitalize">
+          learn first? <a href="" class="text-uppercase">click here!</a>
+        </h5>
+        -----------------------------------------------
+        <div class="checkbox text-uppercase h6 mb-0 mt-2">
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="check type-check"
+              id="clinical-check"
+              value="clinical"
+            />clinical</label
+          >
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="check type-check"
+              id="general-check"
+              value="general"
+            />general</label
+          >
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="type-check mixed"
+              id="mixed-type-check"
+              value="mixed"
+            />mixed</label
+          >
         </div>
-    </div> 
-      
- 
-      
-      
+        -----------------------------------------------
+        <div class="checkbox text-uppercase h6 mb-0 mt-2">
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="check system-check"
+              id="cns-check"
+              value="cns"
+            />cns</label
+          >
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="check system-check"
+              id="git-check"
+              value="git"
+            />git</label
+          >
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="check system-check"
+              id="cvs-check"
+              value="cvs"
+            />cvs</label
+          >
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="system-check mixed"
+              id="mixed-system-check"
+              value="mixed"
+            />mixed</label
+          >
+        </div>
+        -----------------------------------------------
+        <div class="checkbox text-uppercase h6 mb-0 mt-2">
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="check topic-check"
+              id="anatomy-check"
+              value="anatomy"
+            />anatomy</label
+          >
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="check topic-check"
+              id="pathology-check"
+              value="pathology"
+            />pathology</label
+          >
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="topic-check mixed"
+              id="mixed-topic-check"
+              value="mixed"
+            />mixed</label
+          >
+        </div>
+        -----------------------------------------------
+        <div class="checkbox text-uppercase h6 mb-0 mt-2">
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="check level-check"
+              id="level1-check"
+              value="level1"
+            />level 1</label
+          >
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="check level-check"
+              id="level2-check"
+              value="level2"
+            />level 2</label
+          >
+          <label class="mr-3"
+            ><input
+              type="checkbox"
+              class="level-check mixed"
+              id="mixed-level-check"
+              value="mixed"
+            />mixed</label
+          >
+        </div>
+        -----------------------------------------------
+
+        <br />
+        <!-- the start button -->
+        <a
+          href="game.html"
+          class="start-btn btn btn-success text-light text-uppercase"
+          id="start-btn"
+          >start!</a
+        >
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
-      <script src="js/home.js"></script>
+    <script src="js/home.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
