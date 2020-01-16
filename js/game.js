@@ -567,7 +567,7 @@ function changePage() {
 
   checkIfPoints = false;
   timer.style.color = "";
-  timer.style.fontSize = "5rem";
+  timer.style.fontSize = "2rem";
   timer.textContent = "20s";
   timer.classList.remove("time-up");
 
